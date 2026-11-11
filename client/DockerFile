@@ -1,0 +1,8 @@
+#Que imagen base vamos a poner
+FROM nginx:alpine
+#Eliminar archivos por defectos
+RUN rm -rf /usr/share/nginx/html/*
+#Copiar nuestro proyecto
+COPY . /usr/share/nginx/html
+#Decir en que puerto
+EXPOSE 80

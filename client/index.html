@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personas</title>
+</head>
+<body>
+    <h1>Registro de personas</h1>
+
+    <form id="persona-form">
+        <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="message"></p>
+
+    <table id="people-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody id="people-body"></tbody>
+    </table>
+
+    <script src="./app.js"></script>
+</body>
+</html>
