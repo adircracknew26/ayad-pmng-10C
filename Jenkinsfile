@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Deteniendo contenedores...'
                 sh '''
-                    docker compose -p ${COMPOSE_PROJECT_NAME} -f ${COMPOSE_FILE} --env-file ${ENV_FILE} down
+                    docker compose -p ${COMPOSE_PROJECT_NAME} -f ${COMPOSE_FILE} --env-file ${ENV_FILE} down --remove-orphans
                 '''
             }
         }
@@ -42,7 +42,7 @@ pipeline {
             steps{
                 echo 'Levantando contenedores...'
                 sh '''
-                    docker compose -p ${COMPOSE_PROJECT_NAME} -f ${COMPOSE_FILE} --env-file ${ENV_FILE} up -d
+                    docker compose -p ${COMPOSE_PROJECT_NAME} -f ${COMPOSE_FILE} --env-file ${ENV_FILE} up -d --remove-orphans
                 '''
             }
         }
