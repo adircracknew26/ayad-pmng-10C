@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Eliminar imagenes anteriores...'
                 sh '''
-                    IMAGES=$(DOCKER compose -p ${COMPOSE_PROJECT_NAME} -f ${COMPOSE_FILE} --env-file ${ENV_FILE} config --images | sort -u)
+                    IMAGES=$(docker compose -p ${COMPOSE_PROJECT_NAME} -f ${COMPOSE_FILE} --env-file ${ENV_FILE} config --images | sort -u)
 
                     for IMAGE in $IMAGES; do
                         echo "Eliminando imagen: $IMAGE"
