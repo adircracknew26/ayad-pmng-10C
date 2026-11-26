@@ -1,4 +1,4 @@
-const API_URL = "http://adirdomain.duckdns.org/pmng-api/people";
+const API_URL = "https://adirdomain.duckdns.org/pmng-api/people";
 
 const form = document.getElementById("persona-form");
 const nameInput = document.getElementById("name");
